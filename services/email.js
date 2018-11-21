@@ -19,7 +19,8 @@ formatEnquiryMail: (payload)=>{
       </head>
       <body style="margin:0px; padding:0px;" bgcolor="#ffffff">
         Hello Manisha and Arun,
-
+        <br/>
+        <br/>
                 You have received new wish from ${payload.from},
         <br/>
         <br/>

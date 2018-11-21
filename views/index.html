@@ -330,7 +330,17 @@
 							<label for="message">Your Wishes</label>
 							<textarea required class="form-control" rows="10" style="resize:none;" id="message" placeholder="Your Wishes"></textarea>
 						</div>
-						<button type="submit" class="btn btn-primary" style="margin-bottom: 30px;">Submit</button>
+						<div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-10 col-md-10 col-sm-10" style="height:50px;margin-bottom: 30px;">
+							<button type="submit" class="btn btn-primary">Submit</button>
+							<div class="loader"></div>
+							<div class="success-alert" class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6">
+								Message sent successfully...
+							</div>
+							<div class="error-alert" class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-lg-6 col-md-6 col-sm-6">
+								Something went wrong...
+							</div>
+						</div>
+						
 					</form>
 				</div>
 			</section>

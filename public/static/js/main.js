@@ -22,7 +22,9 @@ $(window).on('load', function() {
  /* ***************** start document load **********************/
  $(document).ready(function() {
     "use strict";   
-     
+    $(".loader").hide(); 
+    $(".success-alert").hide();
+    $(".error-alert").hide();
     var $tfront = $(".title-front").hide();
     var $tunder = $(".title-under").hide();
     $tfront.show().arctext({radius: 250});
@@ -284,6 +286,7 @@ $(window).on('load', function() {
      //END GOOGLE MAPS  
 
     $("form").submit(function(e){
+        $(".loader").show();
         $('button[type="submit"]').hide();
         $.ajax({
             url:"./rsvp",
@@ -293,10 +296,23 @@ $(window).on('load', function() {
                 message: $("#message").val()
             },
             success: function(){
-                $('button[type="submit"]').show();
+                $(".loader").hide();
+                $("#inputEmail").val("");
+                $("#message").val("");
+                $(".success-alert").show();
+                setTimeout(function(){
+                    $(".success-alert").hide();
+                    $('button[type="submit"]').show();
+                },3000);
+                
             },
             error: function(){
-                $('button[type="submit"]').show();
+                $(".loader").hide();
+                $(".error-alert").show();
+                setTimeout(function(){
+                    $(".error-alert").hide();
+                    $('button[type="submit"]').show();
+                },3000);
             }
         })
         e.preventDefault();

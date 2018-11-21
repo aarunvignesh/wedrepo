@@ -1994,6 +1994,42 @@ span.swirl-right {
     	max-width: 295px;
 	}
 }
+
+.loader {
+	border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-left: 50%;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success-alert{
+	background-color: rgb(42, 181, 236); 
+	padding: 10px;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.error-alert{
+	background-color: orangered; 
+	padding: 10px;
+	text-align: center;
+	color: white;
+	border-radius: 5px;
+    width: 60%;
+    margin-left: 20%;
+}
+
 /***********************************
 			/* 4. END RESPONSIVE */
 /**********************************
