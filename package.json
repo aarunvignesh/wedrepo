@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/aarunvignesh/wedrepo#readme",
   "dependencies": {
+    "aws-sdk": "^2.360.0",
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "nodemailer": "^4.7.0",
     "path": "^0.12.7"
   }
 }

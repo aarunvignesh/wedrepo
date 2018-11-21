@@ -284,6 +284,21 @@ $(window).on('load', function() {
      //END GOOGLE MAPS  
 
     $("form").submit(function(e){
+        $('button[type="submit"]').hide();
+        $.ajax({
+            url:"./rsvp",
+            method:"post",
+            data:{
+                from: $("#inputEmail").val(),
+                message: $("#message").val()
+            },
+            success: function(){
+                $('button[type="submit"]').show();
+            },
+            error: function(){
+                $('button[type="submit"]').show();
+            }
+        })
         e.preventDefault();
     });
 
