@@ -21,18 +21,24 @@ formatEnquiryMail: (payload)=>{
         Hello Manisha and Arun,
 
                 You have received new wish from ${payload.from},
-
-        
+        <br/>
+        <br/>
+        <br/>
+        <br/>
         ${payload.message}
-
+        <br/>
+        <br/>
+        <br/>
+        <br/>
 
         
         ---------------------------
+        <br/>
+        <br/>
         Thank You
       </body>
     </html>     
     `;
-
    return new mailer({
         from: settings.email.from,
         to: settings.email.toList,

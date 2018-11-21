@@ -19,15 +19,20 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get("/", function(req, res){
     res.render("index");
 });
-
 app.post("/rsvp",function(req, res){
     email.formatEnquiryMail(req.body).compile().build((err, mail)=>{
-        var sendPromise = new AWS.SES({apiVersion: '2010-12-01'})
+        var sendPromise = new AWS.SES({
+            accessKeyId: config.aws.accessKey, 
+            secretAccessKey:config.aws.secretKey,
+            region: "us-east-1",
+            apiVersion: '2010-12-01'
+        })
         .sendRawEmail({RawMessage: {Data: mail}})
         .promise();
 
           sendPromise.then(
             function(data) {
+                console.log(data);
                 res.json({code:200, msg:"Sent successfully..."});
             }).catch(
                 function(err) {
