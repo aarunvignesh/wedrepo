@@ -282,6 +282,11 @@ $(window).on('load', function() {
      }
      google.maps.event.addDomListener(window, 'load', initialize);
      //END GOOGLE MAPS  
+
+    $("form").submit(function(e){
+        e.preventDefault();
+    });
+
      /*========== Countdown start ================*/
              var clock;
  
