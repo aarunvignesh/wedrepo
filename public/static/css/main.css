@@ -78,6 +78,10 @@ body.show-content {
 	overflow-x: hidden;
 }
 
+.page-overlay{
+	overflow-x: hidden;
+}
+
 h1 {
 	font-size: 23px;
 }
@@ -176,7 +180,6 @@ img {
 	right:0;
 	bottom:0; 
 	z-index:9999;
-	overflow-x:hidden;
 }
 
 @-webkit-keyframes heart-zoom {
