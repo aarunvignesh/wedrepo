@@ -296,7 +296,7 @@ $(window).on('load', function() {
                  minimumDigits: 9,
                  callbacks: {
                      stop: function() {
-                         $('.message').html('The clock has stopped!')
+                         $('.message').html('Hurray!!! We\'re married!!!');
                      }
                  }
              });
