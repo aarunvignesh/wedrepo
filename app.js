@@ -42,6 +42,10 @@ app.post("/rsvp",function(req, res){
         });
 });
 
+app.get("*",(req, res) => {
+    res.redirect("/");
+});
+
 app.listen(config.port, function(){
     console.log(">>> Server Started Successfully <<<");
 });
