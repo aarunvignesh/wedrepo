@@ -791,6 +791,11 @@ span.swirl-right {
 	z-index: 1;
 }
 
+.sl-close{
+	cursor: pointer !important;
+    z-index: 9999 !important;
+}
+
 .navbar-button span:nth-child(1) {
 	top: 0;
 }
